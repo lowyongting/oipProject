@@ -1,0 +1,16 @@
+<div class="chart-wrapper" style="width: 800px;">
+
+  <form style="margin-left: 2%;" (ngSubmit)="onSubmit($event)">
+    <label for="searchDate">Date:</label>
+    <input type="date" id="searchDate" name="searchDate" >
+    <input type="submit" value="Search">
+  </form>
+
+  <span style="margin-left: 20px;">Date: </span>
+  <span #date></span>
+
+  <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+    [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend" [colors]="pieChartColors">
+  </canvas>
+
+</div>
